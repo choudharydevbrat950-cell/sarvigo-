@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#176b3a">
+<title>Sarvigo | Farming Essentials</title>
+<style>
+:root{--green:#176b3a;--green2:#23884b;--pale:#eef8ef;--ink:#17231a;--muted:#68756b;--line:#e2e9e2;--orange:#f4a62a;--white:#fff;--shadow:0 8px 26px rgba(23,65,36,.09)}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:#f7faf7}button,input,select,textarea{font:inherit}button{cursor:pointer}.topbar{background:#104d2a;color:white;text-align:center;padding:8px 12px;font-size:13px}.header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}.headinner{max-width:1180px;margin:auto;padding:14px 20px;display:flex;gap:18px;align-items:center}.logo{display:flex;align-items:center;gap:9px;min-width:145px;font-weight:850;font-size:25px;color:var(--green);letter-spacing:-1px}.logo-mark{display:grid;place-items:center;width:39px;height:39px;background:var(--green);color:white;border-radius:13px;font-size:22px}.search{flex:1;display:flex;background:#f3f7f3;border:1px solid var(--line);border-radius:12px;overflow:hidden}.search input{flex:1;min-width:0;border:0;background:transparent;padding:12px;outline:none}.search button{border:0;background:var(--green);color:#fff;padding:0 17px}.cartbtn{border:1px solid var(--line);background:white;border-radius:12px;padding:10px 13px;font-weight:750;color:var(--green);white-space:nowrap}.count{background:var(--orange);color:#222;border-radius:20px;padding:2px 7px;margin-left:4px}.wrap{max-width:1180px;margin:auto;padding:24px 20px 60px}.hero{background:linear-gradient(120deg,#124f2c,#258447);color:white;border-radius:22px;padding:34px;display:grid;grid-template-columns:1.4fr .6fr;gap:20px;align-items:center;overflow:hidden}.eyebrow{font-size:12px;font-weight:800;letter-spacing:1.7px;text-transform:uppercase;color:#c5f1cb}.hero h1{font-size:clamp(30px,4vw,47px);line-height:1.08;letter-spacing:-1.4px;margin:12px 0}.hero p{max-width:560px;line-height:1.7;color:#e5f6e8;margin:0 0 22px}.primary{background:var(--orange);color:#1f2a20;border:0;border-radius:10px;padding:12px 18px;font-weight:800}.hero-art{text-align:center;font-size:100px;filter:drop-shadow(0 8px 8px #0b331d55)}.features{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:18px 0 30px}.feature{background:white;border:1px solid var(--line);border-radius:13px;padding:15px;display:flex;gap:12px;align-items:center}.feature .emoji{font-size:25px}.feature strong{display:block;font-size:14px}.feature small{color:var(--muted)}.sectionhead{display:flex;justify-content:space-between;align-items:end;gap:10px;margin:28px 0 15px}.sectionhead h2{margin:0;font-size:24px;letter-spacing:-.5px}.sectionhead p{margin:5px 0 0;color:var(--muted);font-size:14px}.filters{display:flex;gap:8px;overflow:auto;padding-bottom:5px;margin-bottom:17px}.chip{border:1px solid var(--line);background:#fff;color:#415044;border-radius:25px;padding:9px 14px;white-space:nowrap}.chip.active{background:var(--green);color:#fff;border-color:var(--green)}.products{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}.product{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 3px 12px #15351b06;display:flex;flex-direction:column}.product .pic{height:145px;display:grid;place-items:center;background:linear-gradient(145deg,#eef8e9,#f9f7e8);font-size:65px}.productbody{padding:14px;display:flex;flex-direction:column;flex:1}.tag{font-size:11px;font-weight:800;color:var(--green);text-transform:uppercase;letter-spacing:.6px}.product h3{font-size:15px;margin:7px 0 5px}.desc{color:var(--muted);font-size:12px;line-height:1.5;min-height:36px}.price{font-size:19px;font-weight:850;margin:12px 0}.price small{font-size:12px;color:var(--muted);font-weight:500}.add{border:0;background:var(--green);color:#fff;border-radius:9px;padding:10px;font-weight:750;margin-top:auto}.advice{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;margin-top:32px}.advice h2{margin:0 0 8px}.advice p{color:var(--muted);line-height:1.65}.advicegrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.adviceitem{background:var(--pale);border-radius:12px;padding:14px;font-size:14px;line-height:1.5}.footer{background:#103e24;color:#dceee0;padding:25px 20px;text-align:center;font-size:13px}.footer strong{color:white}.overlay{position:fixed;inset:0;background:#10251688;z-index:10;display:none;justify-content:flex-end}.overlay.open{display:flex}.drawer{background:#fff;width:min(520px,100%);height:100%;overflow:auto;padding:22px;box-shadow:var(--shadow)}.drawerhead{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:14px}.drawerhead h2{margin:0}.xbtn{border:0;background:#f0f5f0;border-radius:8px;width:38px;height:38px;font-size:23px}.cartempty{text-align:center;padding:40px 10px;color:var(--muted)}.cartline{display:grid;grid-template-columns:48px 1fr auto;gap:12px;align-items:center;border-bottom:1px solid var(--line);padding:14px 0}.carticon{background:var(--pale);border-radius:10px;width:48px;height:48px;display:grid;place-items:center;font-size:26px}.cartline h4{margin:0 0 4px;font-size:14px}.cartline small{color:var(--muted)}.qty{display:flex;align-items:center;gap:8px;margin-top:7px}.qty button{border:1px solid var(--line);background:#fff;border-radius:6px;width:26px;height:26px}.totalrow{display:flex;justify-content:space-between;margin:10px 0;color:var(--muted)}.totalrow.final{font-weight:850;color:var(--ink);font-size:19px;border-top:1px solid var(--line);padding-top:14px}.checkoutbtn{width:100%;border:0;background:var(--green);color:#fff;padding:14px;border-radius:11px;font-weight:800;margin-top:12px}.formgroup{margin:14px 0}.formgroup label{display:block;font-size:13px;font-weight:750;margin-bottom:6px}.formgroup input,.formgroup textarea,.formgroup select{width:100%;border:1px solid #d6e0d7;border-radius:9px;padding:11px;background:#fff;outline-color:var(--green)}.payoption{border:1px solid var(--line);border-radius:10px;padding:12px;display:flex;gap:10px;align-items:flex-start;margin:9px 0}.payoption input{margin-top:4px;accent-color:var(--green)}.payoption small{display:block;color:var(--muted);margin-top:3px;line-height:1.4}.notice{background:#fff7e6;border:1px solid #f4d28a;color:#725117;padding:11px;border-radius:9px;font-size:12px;line-height:1.5}.success{background:var(--pale);padding:16px;border-radius:12px;margin-top:16px;line-height:1.6}.hidden{display:none!important}.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#183e25;color:white;padding:12px 18px;border-radius:10px;z-index:20;display:none;box-shadow:var(--shadow);max-width:90%;text-align:center}.toast.show{display:block}.noresults{padding:25px;text-align:center;color:var(--muted);grid-column:1/-1}
+@media(max-width:850px){.products{grid-template-columns:repeat(3,minmax(0,1fr))}.hero{grid-template-columns:1fr .35fr;padding:26px}.hero-art{font-size:75px}.headinner{flex-wrap:wrap}.logo{min-width:auto}.search{order:3;flex-basis:100%}}
+@media(max-width:600px){.wrap{padding:16px 13px 40px}.headinner{padding:11px 13px;gap:10px}.logo{font-size:22px}.logo-mark{width:34px;height:34px}.cartbtn{margin-left:auto}.hero{grid-template-columns:1fr;padding:24px 20px}.hero-art{display:none}.hero h1{font-size:34px}.features{grid-template-columns:1fr;gap:8px}.feature{padding:11px}.products{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.product .pic{height:112px;font-size:52px}.productbody{padding:11px}.product h3{font-size:14px}.price{font-size:17px}.advicegrid{grid-template-columns:1fr}.sectionhead h2{font-size:21px}}
+</style>
+</head>
+<body>
+<div class="topbar">🌱 Helping farmers shop smarter — farming essentials in one place</div>
+<header class="header">
+  <div class="headinner">
+    <div class="logo"><span class="logo-mark">🌿</span>Sarvigo</div>
+    <form class="search" id="searchForm"><input id="searchInput" type="search" placeholder="Search seeds, fertilizers, tools..." aria-label="Search products"><button type="submit">Search</button></form>
+    <button class="cartbtn" id="openCart">🛒 Cart <span class="count" id="cartCount">0</span></button>
+  </div>
+</header>
+<main class="wrap">
+  <section class="hero">
+    <div><div class="eyebrow">Your farming companion</div><h1>Everything for farming,<br>all in one place.</h1><p>Shop seeds, fertilizers, crop-care products and farming tools. Find useful farming guidance to help make informed choices.</p><button class="primary" onclick="document.getElementById('shop').scrollIntoView({behavior:'smooth'})">Explore Products ↓</button></div>
+    <div class="hero-art" aria-hidden="true">🌾🧑‍🌾</div>
+  </section>
+  <section class="features">
+    <div class="feature"><span class="emoji">🚚</span><div><strong>Convenient Shopping</strong><small>Browse farming essentials</small></div></div>
+    <div class="feature"><span class="emoji">🌱</span><div><strong>Farming Guidance</strong><small>Helpful crop-care information</small></div></div>
+    <div class="feature"><span class="emoji">🔒</span><div><strong>Checkout Options</strong><small>COD or configured online payment</small></div></div>
+  </section>
+  <section id="shop">
+    <div class="sectionhead"><div><h2>Shop farming essentials</h2><p>Choose products to add to your cart.</p></div></div>
+    <div class="filters" id="filters">
+      <button class="chip active" data-cat="All">All Products</button>
+      <button class="chip" data-cat="Seeds">Seeds</button>
+      <button class="chip" data-cat="Fertilizers">Fertilizers</button>
+      <button class="chip" data-cat="Crop Care">Crop Care</button>
+      <button class="chip" data-cat="Equipment">Equipment</button>
+      <button class="chip" data-cat="Organic">Organic</button>
+    </div>
+    <div class="products" id="products"></div>
+  </section>
+  <section class="advice">
+    <h2>🌿 Smart Farming Advice</h2>
+    <p>Learn about sowing, soil care, irrigation and crop protection. Recommendations should be matched to your crop, soil test, local conditions and the product label.</p>
+    <div class="advicegrid">
+      <div class="adviceitem"><strong>🌾 Seed selection</strong><br>Choose crop varieties suited to your region, season and water availability.</div>
+      <div class="adviceitem"><strong>🧪 Soil & fertilizer</strong><br>Use soil-test results and label directions to decide fertilizer type and quantity.</div>
+      <div class="adviceitem"><strong>💧 Crop care</strong><br>Monitor crop growth and weather to plan irrigation and timely care.</div>
+    </div>
+  </section>
+</main>
+<footer class="footer"><strong>Sarvigo</strong> — Your Farming Needs, Just a Tap Away.<br><br>Demo storefront. Product availability, prices, delivery and payment require business setup.</footer>
+
+<div class="overlay" id="cartOverlay" aria-hidden="true"><aside class="drawer" role="dialog" aria-modal="true" aria-label="Shopping cart">
+  <div class="drawerhead"><h2 id="drawerTitle">Your Cart</h2><button class="xbtn" id="closeCart" aria-label="Close cart">×</button></div>
+  <div id="cartView"><div id="cartItems"></div><div id="cartSummary" class="hidden"><div class="totalrow"><span>Subtotal</span><strong id="subtotal">₹0</strong></div><div class="totalrow"><span>Delivery</span><strong id="delivery">Calculated at checkout</strong></div><div class="totalrow final"><span>Total</span><strong id="total">₹0</strong></div><button class="checkoutbtn" id="goCheckout">Continue to Checkout</button></div></div>
+  <form id="checkoutForm" class="hidden">
+    <div class="notice">Demo checkout: orders are not sent to a real store unless you connect a backend. Never enter card details on this demo page.</div>
+    <div class="formgroup"><label for="customerName">Full name *</label><input id="customerName" required autocomplete="name" placeholder="Your full name"></div>
+    <div class="formgroup"><label for="phone">Mobile number *</label><input id="phone" required type="tel" inputmode="numeric" pattern="[6-9][0-9]{9}" maxlength="10" autocomplete="tel" placeholder="10-digit mobile number"></div>
+    <div class="formgroup"><label for="address">Delivery address *</label><textarea id="address" required rows="3" autocomplete="street-address" placeholder="House, village / street, area"></textarea></div>
+    <div class="formgroup"><label for="city">City / District *</label><input id="city" required autocomplete="address-level2" placeholder="City or district"></div>
+    <div class="formgroup"><label for="pincode">PIN code *</label><input id="pincode" required inputmode="numeric" pattern="[0-9]{6}" maxlength="6" autocomplete="postal-code" placeholder="6-digit PIN code"></div>
+    <div class="formgroup"><label>Payment method *</label>
+      <label class="payoption"><input type="radio" name="payment" value="cod" checked><span><strong>Cash on Delivery (COD)</strong><small>Pay when the order is delivered. This demo only records a sample order in your browser.</small></span></label>
+      <label class="payoption"><input type="radio" name="payment" value="upi"><span><strong>UPI app (configuration required)</strong><small>Requires your verified merchant UPI ID and a real order/payment verification system.</small></span></label>
+    </div>
+    <div id="upiConfigNotice" class="notice">To enable UPI, configure MERCHANT_UPI_ID in the code and implement server-side payment/order verification. Do not treat opening a UPI app as proof of payment.</div>
+    <button type="submit" class="checkoutbtn">Place Demo Order</button>
+    <button type="button" class="chip" style="width:100%;margin-top:8px" id="backToCart">← Back to cart</button>
+  </form>
+  <div id="orderResult" class="hidden"></div>
+</aside></div>
+<div class="toast" id="toast"></div>
+<script>
+/*
+ SARVIGO DEMO CONFIGURATION
+ 1) This single HTML file is a frontend demo; it does not save orders to a business server.
+ 2) For real payments, use a payment provider (e.g. Razorpay) with a backend:
+    server creates an order, frontend opens checkout with public key + order_id,
+    server verifies signature/payment webhook before confirming the order.
+ 3) Never put secret API keys in HTML/JavaScript.
+ 4) For UPI intent, set a verified merchant UPI ID below, but UPI intent alone cannot verify payment.
+*/
+const MERCHANT_UPI_ID = ""; // Example format only: merchantname@bank — replace with your verified UPI ID.
+const products = [
+ {id:1,name:"Hybrid Vegetable Seeds",cat:"Seeds",price:249,unit:"pack",icon:"🌱",desc:"Seeds for home and farm vegetable growing."},
+ {id:2,name:"Wheat Seeds",cat:"Seeds",price:699,unit:"bag",icon:"🌾",desc:"Wheat seed sample listing; variety varies by region."},
+ {id:3,name:"NPK Fertilizer",cat:"Fertilizers",price:599,unit:"bag",icon:"🧪",desc:"Choose nutrient grade based on soil and crop needs."},
+ {id:4,name:"Organic Compost",cat:"Organic",price:199,unit:"bag",icon:"🍂",desc:"Organic soil-conditioning product sample."},
+ {id:5,name:"Hand Pressure Sprayer",cat:"Equipment",price:899,unit:"piece",icon:"🚿",desc:"Hand-operated sprayer for suitable applications."},
+ {id:6,name:"Drip Irrigation Kit",cat:"Equipment",price:1299,unit:"kit",icon:"💧",desc:"Water-delivery kit for compatible garden or farm use."},
+ {id:7,name:"Neem-Based Crop Care",cat:"Crop Care",price:349,unit:"bottle",icon:"🌿",desc:"Check product label and approved crop uses before use."},
+ {id:8,name:"Garden Hand Tools Set",cat:"Equipment",price:499,unit:"set",icon:"🧰",desc:"Basic hand tools for gardening and small farm tasks."}
+];
+let cart = {};
+let activeCategory = "All";
+let query = "";
+const money = n => new Intl.NumberFormat("en-IN",{style:"currency",currency:"INR",maximumFractionDigits:0}).format(n);
+function renderProducts(){
+ const list = products.filter(p=>(activeCategory==="All"||p.cat===activeCategory)&&(`${p.name} ${p.cat} ${p.desc}`.toLowerCase().includes(query.toLowerCase())));
+ const root=document.getElementById("products");
+ root.innerHTML=list.length?list.map(p=>`<article class="product"><div class="pic" aria-hidden="true">${p.icon}</div><div class="productbody"><span class="tag">${p.cat}</span><h3>${p.name}</h3><div class="desc">${p.desc}</div><div class="price">${money(p.price)} <small>/ ${p.unit}</small></div><button class="add" onclick="addToCart(${p.id})">＋ Add to Cart</button></div></article>`).join(""):`<div class="noresults">No products found. Try another search.</div>`;
+}
+function toast(msg){const el=document.getElementById("toast");el.textContent=msg;el.classList.add("show");setTimeout(()=>el.classList.remove("show"),2400)}
+function addToCart(id){cart[id]=(cart[id]||0)+1;renderCart();toast("Added to your cart")}
+function changeQty(id,delta){cart[id]=(cart[id]||0)+delta;if(cart[id]<=0)delete cart[id];renderCart()}
+function subtotal(){return Object.entries(cart).reduce((s,[id,q])=>s+products.find(p=>p.id===Number(id)).price*q,0)}
+function renderCart(){
+ const count=Object.values(cart).reduce((a,b)=>a+b,0);document.getElementById("cartCount").textContent=count;
+ const items=document.getElementById("cartItems"),summary=document.getElementById("cartSummary");
+ if(!count){items.innerHTML='<div class="cartempty"><div style="font-size:50px">🛒</div><h3>Your cart is empty</h3><p>Add farming essentials to get started.</p><button class="checkoutbtn" onclick="closeCart()">Continue Shopping</button></div>';summary.classList.add("hidden")}
+ else{items.innerHTML=Object.entries(cart).map(([id,q])=>{const p=products.find(x=>x.id===Number(id));return `<div class="cartline"><div class="carticon">${p.icon}</div><div><h4>${p.name}</h4><small>${money(p.price)} / ${p.unit}</small><div class="qty"><button onclick="changeQty(${p.id},-1)" aria-label="Decrease quantity">−</button><span>${q}</span><button onclick="changeQty(${p.id},1)" aria-label="Increase quantity">+</button></div></div><strong>${money(p.price*q)}</strong></div>`}).join("");summary.classList.remove("hidden")}
+ document.getElementById("subtotal").textContent=money(subtotal());document.getElementById("total").textContent=money(subtotal());
+}
+function openCart(){document.getElementById("cartOverlay").classList.add("open");document.getElementById("cartOverlay").setAttribute("aria-hidden","false");showCartView()}
+function closeCart(){document.getElementById("cartOverlay").classList.remove("open");document.getElementById("cartOverlay").setAttribute("aria-hidden","true")}
+function showCartView(){document.getElementById("drawerTitle").textContent="Your Cart";document.getElementById("cartView").classList.remove("hidden");document.getElementById("checkoutForm").classList.add("hidden");document.getElementById("orderResult").classList.add("hidden")}
+function showCheckout(){if(!Object.keys(cart).length){toast("Your cart is empty");return}document.getElementById("drawerTitle").textContent="Checkout";document.getElementById("cartView").classList.add("hidden");document.getElementById("checkoutForm").classList.remove("hidden");document.getElementById("orderResult").classList.add("hidden");document.getElementById("upiConfigNotice").classList.toggle("hidden",!!MERCHANT_UPI_ID)}
+document.getElementById("openCart").addEventListener("click",openCart);
+document.getElementById("closeCart").addEventListener("click",closeCart);
+document.getElementById("cartOverlay").addEventListener("click",e=>{if(e.target.id==="cartOverlay")closeCart()});
+document.getElementById("goCheckout").addEventListener("click",showCheckout);
+document.getElementById("backToCart").addEventListener("click",showCartView);
+document.getElementById("filters").addEventListener("click",e=>{const b=e.target.closest("button[data-cat]");if(!b)return;activeCategory=b.dataset.cat;document.querySelectorAll(".chip[data-cat]").forEach(x=>x.classList.toggle("active",x===b));renderProducts()});
+document.getElementById("searchForm").addEventListener("submit",e=>{e.preventDefault();query=document.getElementById("searchInput").value.trim();renderProducts();document.getElementById("shop").scrollIntoView({behavior:"smooth"})});
+document.getElementById("searchInput").addEventListener("input",e=>{query=e.target.value.trim();renderProducts()});
+document.querySelectorAll('input[name="payment"]').forEach(r=>r.addEventListener("change",()=>{document.getElementById("upiConfigNotice").classList.toggle("hidden",r.value!=="upi"||!r.checked||!!MERCHANT_UPI_ID)}));
+document.getElementById("checkoutForm").addEventListener("submit",e=>{
+ e.preventDefault();
+ const payment=document.querySelector('input[name="payment"]:checked').value;
+ const name=document.getElementById("customerName").value.trim();
+ const orderRef="SAR-"+Date.now().toString().slice(-8);
+ if(payment==="upi"){
+   if(!MERCHANT_UPI_ID){toast("UPI is not configured yet. Choose COD for this demo.");return}
+   // UPI intent is only a payment-app handoff; it does not verify that payment happened.
+   const upiUrl=`upi://pay?pa=${encodeURIComponent(MERCHANT_UPI_ID)}&pn=${encodeURIComponent("Sarvigo")}&am=${encodeURIComponent(subtotal().toFixed(2))}&cu=INR&tn=${encodeURIComponent("Sarvigo order "+orderRef)}`;
+   const result=document.getElementById("orderResult");result.classList.remove("hidden");result.innerHTML=`<div class="success"><h3>Continue in your UPI app</h3><p>Order reference: <strong>${orderRef}</strong><br>Total: <strong>${money(subtotal())}</strong></p><p>After paying, the merchant must verify the transaction before confirming an order. This demo cannot verify UPI payments or save your order to a server.</p><a class="checkoutbtn" style="display:block;text-align:center;text-decoration:none" href="${upiUrl}">Open UPI App</a><button class="checkoutbtn" onclick="closeCart()">Close</button></div>`;
+   document.getElementById("checkoutForm").classList.add("hidden");document.getElementById("drawerTitle").textContent="Payment";return;
+ }
+ const details={reference:orderRef,name,phone:document.getElementById("phone").value.trim(),address:document.getElementById("address").value.trim(),city:document.getElementById("city").value.trim(),pincode:document.getElementById("pincode").value.trim(),payment:"Cash on Delivery",items:Object.entries(cart).map(([id,q])=>({name:products.find(p=>p.id===Number(id)).name,quantity:q})),total:subtotal(),createdAt:new Date().toISOString()};
+ // Demo-only: this sample confirmation is shown on-screen and is not transmitted to a store.
+ document.getElementById("checkoutForm").classList.add("hidden");document.getElementById("drawerTitle").textContent="Demo Order";
+ const result=document.getElementById("orderResult");result.classList.remove("hidden");result.innerHTML=`<div class="success"><h3>✓ Demo order created</h3><p>Thank you, ${escapeHtml(name)}. Your sample order reference is <strong>${orderRef}</strong>.</p><p>Payment: Cash on Delivery<br>Order total: <strong>${money(details.total)}</strong></p><p><strong>Important:</strong> This order has not been sent to a real shop or delivery service. Connect a backend to receive and manage real orders.</p><button class="checkoutbtn" id="doneBtn">Continue Shopping</button></div>`;
+ document.getElementById("doneBtn").addEventListener("click",()=>{cart={};renderCart();showCartView();closeCart();renderProducts()});
+});
+function escapeHtml(s){return s.replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+renderProducts();renderCart();
+</script>
+</body>
+</html>
